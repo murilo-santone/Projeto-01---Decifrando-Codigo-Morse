@@ -22,8 +22,7 @@ def salva_mensagem_csv(caminho_arquivo, mensagem, dict_morse):
 
 def main():
     print('Executando Programa...')
-    #mensagem = input('Informe a mensagem para ser decodificada: ')
-    txt1, txt2, txt3 = 
+    mensagem = input('Informe a mensagem para ser decodificada: ')
     print('Decodificando sua mensagem...')
     salva_mensagem_csv(file_path, mensagem, dict_morse)
     print(f"""Mensagem decodificada: {decodificar_morse(mensagem, dict_morse)}
