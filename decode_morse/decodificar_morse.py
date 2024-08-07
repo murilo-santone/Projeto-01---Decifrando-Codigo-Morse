@@ -7,7 +7,11 @@ def decodificar_morse(mensagem, dict_morse):
     lista_mensagem = mensagem.split(" ") # separa a mensagem em uma lista
     mensagem_decodificada = []
     for letra in lista_mensagem:
-        mensagem_decodificada.append(dict_morse[letra])
+        if letra in dict_morse:
+            valor_morse = dict_morse[letra]
+            if isinstance(valor_morse, int):
+                valor_morse = str(valor_morse)  # converte variavel letra para string se for inteiro
+            mensagem_decodificada.append(valor_morse)
     return "".join(mensagem_decodificada)
 
 def salva_mensagem_csv(caminho_arquivo, mensagem, dict_morse):
